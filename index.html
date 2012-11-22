@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style type="text/css">
+		#theForm {width:350px;}
+		/*input :invalid  { background-color:#D96CBC; }*/
+		h5 {margin-bottom:3px;}
+		input.nameBox { background-color:#B3EBFF; }
+		em.note {font-size:.75em;}
+		em.doubleCheck {color:Orange}
+		
+		#txtEmail {}
+		#btnSubmit{display:block; margin: 20px auto; }
+  </style>
+  
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="modernizr-2.0.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+
+    </header>
+    <div id="main" role="main">
+		<em>* Denotes an optional field</em>
+		<form id="theForm" action="">
+			<h5>Enter Username: </h5>
+			<input name="username" type="text" autofocus required />
+			<em class="note">(Will be auto focused on page load)</em>
+		
+			<h5>Enter Your Name:</h5>
+			<input name="fName" class="nameBox" type="text" placeholder="First Name" pattern="[a-z,A-Z]+" />
+			<input name="lName" class="nameBox"  type="text" placeholder="Last Name" pattern="[a-z,A-Z]+" />
+			
+			<h5>Enter Your Sex:</h5>
+			<datalist id="genders">
+				<select name="gender">
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+				</select>
+			</datalist>
+			If other, please specify:
+			<input type="text" name="gender" list="genders" multiple />
+			<br />
+			<em class="note">(Input w/ a data list source, seeds with datalist items, acts like textbox/dropdown hybrid)</em>
+			
+			<h5>How old are you?</h5>
+			<input id="age" name="age" type="number" min="18" max="35" step="1" value="18" />
+			<em class="note">*Chrome Only</em>
+			
+			<h5>What year where you born?</h5>
+			<input id="txtDate" name="date" type="date" />
+			<em class="note">*Chrome Only</em>
+			
+			<h5>Enter Your Email:</h5>
+			<input id="txtEmail" name="email" type="email" required />
+			
+			<h5>*Enter Your Telephone #:</h5>
+			<input id="txtTel" name="tel" type="tel" />
+			<em class="note">Doesnt seem to validate...</em>
+			
+			<h5>What country are you from?</h5>
+			<input type="search" />
+			<br />
+			<em class="note">This is an example of a search field. It will almost exactly match a text element except...1. Linebreaks are ommited 2. It may display differently in the future 3. On mobile browsers it will render differently from text.</em>
+			
+			<!--<h5>What is your fav color?</h5>
+			<input id="txtColor" name="color" type="color" />-->
+			
+			<input id="btnSubmit" type="submit" value="Direct Inject" />
+		</form>
+		
+		<div style="border-top:1px dotted black">
+			<h4>New Form Elements not used in Example</h4>
+			<p><strong>URL</strong> - Renders as text but will validate a URL.</p>
+			<p><strong>Tel</strong> - Redners as text but will validate a URL.</p>
+			<p><strong>Color</strong> - Renders a color picker. Doesnt work on anything but Opera.</p>
+			<!--<output onforminput="value=age.value">0</output>-->
+		</div>
+
+		
+		
+    </div>
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+
+  <!--[if lt IE 7 ]>
+    <script src="js/libs/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+  <![endif]-->
+</body>
+</html>
